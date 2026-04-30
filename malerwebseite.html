@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <meta name="description" content="Beste Lackqualität in Berlin! Wir bieten auch einen Malerservice an! Erhalten Sie 25% Rabatt auf Ihre erste Bestellung">
+    <title>Österreichischer Maler | Lackqualität & Malerservice in Berlin</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: linear-gradient(145deg, #fce4b3 0%, #fcb463 100%);
+            font-family: 'Segoe UI', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            line-height: 1.5;
+            color: #2c2b28;
+        }
+
+        header {
+            background: linear-gradient(95deg, #ffd966 0%, #e6b422 100%);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+            border-bottom: 3px solid #b8860b;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-container {
+            max-width: 1300px;
+            margin: 0 auto;
+            padding: 0.8rem 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .logo-area h1 {
+            color: #b22222;
+            font-size: 1.8rem;
+            font-weight: bold;
+            letter-spacing: 1px;
+            text-shadow: 2px 2px 0 rgba(255,215,0,0.5);
+            margin: 0;
+        }
+
+        .logo-area h1 picture img {
+            vertical-align: middle;
+            border-radius: 50%;
+            border: 2px solid #b8860b;
+        }
+
+        .tagline {
+            background: #8b0000;
+            color: #ffd966;
+            padding: 0.25rem 1rem;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: bold;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 1.5rem;
+            list-style: none;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            font-weight: bold;
+            color: #2c2b28;
+            background: rgba(255,255,200,0.7);
+            padding: 0.5rem 1rem;
+            border-radius: 40px;
+            transition: all 0.2s;
+            font-size: 0.95rem;
+        }
+
+        nav ul li a:hover {
+            background: #fff3c9;
+            color: #b22222;
+            transform: scale(1.02);
+            box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+        }
+
+        .container {
+            max-width: 1300px;
+            margin: 2rem auto;
+            padding: 0 1.5rem;
+        }
+
+        .hero {
+            background: linear-gradient(112deg, #fff0d4 0%, #ffe0b5 100%);
+            padding: 2rem;
+            border-radius: 2rem;
+            margin-bottom: 3rem;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .hero h2 {
+            font-size: 2.2rem;
+            color: #a52a1a;
+            margin-bottom: 0.5rem;
+        }
+
+        .discount-badge {
+            background: #c0392b;
+            display: inline-block;
+            padding: 0.8rem 1.8rem;
+            border-radius: 60px;
+            color: white;
+            font-weight: bold;
+            font-size: 1.4rem;
+            margin: 1rem 0;
+            box-shadow: 0 5px 0 #73281e;
+            letter-spacing: 1px;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            max-width: 700px;
+            margin: 1rem auto;
+        }
+
+        .cta-button {
+            background: #2c6e2f;
+            color: white;
+            border: none;
+            padding: 0.9rem 2rem;
+            font-size: 1.1rem;
+            font-weight: bold;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: 0.2s;
+            margin-top: 0.5rem;
+            box-shadow: 0 4px 0 #1a4a1d;
+        }
+
+        .cta-button:hover {
+            background: #1f5622;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 0 #1a4a1d;
+        }
+
+        .products-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            justify-content: center;
+            margin: 2.5rem 0;
+        }
+
+        .product-card {
+            background: white;
+            border-radius: 1.5rem;
+            padding: 1.5rem;
+            width: 260px;
+            text-align: center;
+            transition: 0.2s;
+            box-shadow: 0 6px 12px rgba(0,0,0,0.08);
+        }
+
+        .product-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 30px rgba(0,0,0,0.12);
+        }
+
+        .product-img {
+            background: #ffdab9;
+            width: 100%;
+            height: 150px;
+            border-radius: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .product-card h3 {
+            margin: 0.5rem 0;
+            color: #b22222;
+        }
+
+        .price {
+            font-weight: bold;
+            color: #1e5f1e;
+            font-size: 1.3rem;
+        }
+
+        .order-small {
+            background: #ffb347;
+            border: none;
+            padding: 0.4rem 1rem;
+            border-radius: 40px;
+            margin-top: 0.8rem;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .info-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .card-block {
+            background: rgba(255, 255, 240, 0.9);
+            border-radius: 1.5rem;
+            padding: 1.8rem;
+            flex: 1;
+            min-width: 250px;
+            box-shadow: 0 6px 14px rgba(0,0,0,0.05);
+            backdrop-filter: blur(1px);
+        }
+
+        .card-block h2 {
+            text-align: left;
+            border-left: 7px solid #e67e22;
+            padding-left: 1rem;
+            margin-bottom: 1.2rem;
+            color: #3b2a1f;
+        }
+
+        .shop-list {
+            list-style: none;
+        }
+
+        .shop-list li {
+            margin-bottom: 0.8rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .shop-list li::before {
+            content: "📍";
+            position: absolute;
+            left: 0;
+        }
+
+        .service-list {
+            list-style: none;
+        }
+        .service-list li {
+            margin-bottom: 0.7rem;
+            font-weight: 500;
+        }
+
+        .order-form {
+            background: #fff8ef;
+            border-radius: 2rem;
+            padding: 2rem;
+            margin: 2rem 0;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+        }
+
+        .form-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            margin-bottom: 1.2rem;
+        }
+
+        .form-group {
+            flex: 1;
+            min-width: 180px;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 0.3rem;
+            color: #4e3a2c;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 0.8rem;
+            border-radius: 1rem;
+            border: 1px solid #e2c7a1;
+            background: #fffcf5;
+            font-family: inherit;
+        }
+
+        button[type="submit"] {
+            background: #b8860b;
+            color: white;
+            font-weight: bold;
+            padding: 0.8rem 2rem;
+            border: none;
+            border-radius: 3rem;
+            font-size: 1rem;
+            margin-top: 1rem;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        button[type="submit"]:hover {
+            background: #9a6e08;
+            transform: scale(1.01);
+        }
+
+        .aside-promo {
+            background: #e6b422cc;
+            border-radius: 1.5rem;
+            padding: 1.5rem;
+            text-align: center;
+            margin: 2rem 0;
+            font-weight: bold;
+            backdrop-filter: blur(3px);
+            border: 1px solid #ffe1a0;
+        }
+
+        footer {
+            background: #2c2b28;
+            color: #dbccc0;
+            margin-top: 3rem;
+            padding: 2rem 1rem;
+        }
+
+        .footer-container {
+            max-width: 1300px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 2rem;
+            padding: 0 1.5rem;
+        }
+
+        .footer-col h4 {
+            color: #fcb463;
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-col p, .footer-col a {
+            color: #e2cfb3;
+            text-decoration: none;
+        }
+
+        .footer-col a:hover {
+            color: #ffbe76;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 2rem;
+            font-size: 0.8rem;
+            border-top: 1px solid #4d443a;
+            margin-top: 1rem;
+        }
+
+        @media (max-width: 780px) {
+            .header-container {
+                flex-direction: column;
+                text-align: center;
+            }
+            .logo-area {
+                justify-content: center;
+            }
+            nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            .hero h2 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo-area">
+                <picture>
+                    <img src="icon.jpg" alt="Österreichischer Maler Logo" width="50" height="50" style="border-radius: 50%;">
+                </picture>
+                <h1>Österreichischer Maler</h1>
+                <div class="tagline">seit 1939 in Berlin</div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#sortiment">Sortiment</a></li>
+                    <li><a href="#adressen">Filialen</a></li>
+                    <li><a href="#service">Lackierservice</a></li>
+                    <li><a href="#kontakt">Kontakt</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="hero">
+            <h2>🎨 Beste Lackqualität in Berlin</h2>
+            <div class="discount-badge">🔥 25% Rabatt auf Ihre erste Bestellung!</div>
+            <p>Professioneller Malerservice & hochwertige Lacke – österreichische Präzision trifft Berliner Kreativität. 
+            Wir lackieren Wände, Möbel, Fassaden und mehr. Jetzt kostenlose Beratung anfragen.</p>
+            <button class="cta-button" onclick="document.getElementById('order-service').scrollIntoView({behavior:'smooth'});">Kostenloses Angebot ➜</button>
+        </div>
+
+        <section id="sortiment">
+            <h2 style="text-align: center; margin-bottom: 1rem;">🏆 Unsere Bestseller</h2>
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-img">🎨</div>
+                    <h3>Premium Seidenmatt</h3>
+                    <p>Wandfarbe • deckend • atmungsaktiv</p>
+                    <div class="price">ab 39,90 €</div>
+                    <button class="order-small">In den Katalog</button>
+                </div>
+                <div class="product-card">
+                    <div class="product-img">✨</div>
+                    <h3>Lack & Klarlack</h3>
+                    <p>Für Holz & Metall, UV-beständig</p>
+                    <div class="price">ab 24,50 €</div>
+                    <button class="order-small">In den Katalog</button>
+                </div>
+                <div class="product-card">
+                    <div class="product-img">🪣</div>
+                    <h3>Fassadenfarbe</h3>
+                    <p>Witterungsfest • 15 Jahre Garantie</p>
+                    <div class="price">ab 89,00 €</div>
+                    <button class="order-small">In den Katalog</button>
+                </div>
+                <div class="product-card">
+                    <div class="product-img">🖌️</div>
+                    <h3>Öko-Kreidefarbe</h3>
+                    <p>Nachhaltig, lösungsmittelfrei</p>
+                    <div class="price">ab 34,90 €</div>
+                    <button class="order-small">In den Katalog</button>
+                </div>
+            </div>
+            <div style="text-align: center; margin: 1rem 0 2rem 0;">
+                <button style="background-color:#8b5a2b; color:white; padding:0.8rem 2rem; border:none; border-radius:40px; font-weight:bold; cursor:pointer;">📖 Vollständigen Katalog ansehen</button>
+            </div>
+        </section>
+
+        <div class="info-grid" id="adressen">
+            <div class="card-block">
+                <h2>🏪 Shop-Adressen Berlin</h2>
+                <ul class="shop-list">
+                    <li><strong>Mitte</strong> – Müllerstraße 166A, 13353 Berlin <br> Mo-Fr 10:00-18:00</li>
+                    <li><strong>Charlottenburg</strong> – Stuttgarter Pl. 2, 10627 Berlin <br> Mo-Fr 10:00-18:00</li>
+                    <li><strong>Friedrichshain</strong> – Frankfurter Tor 1, 10243 Berlin <br> Mo-Fr 10:00-18:00</li>
+                    <li><strong>Neukölln</strong> – Karl-Marx-Straße 131, 12043 Berlin <br> Mo-Fr 10:00-18:00</li>
+                </ul>
+                <p style="margin-top: 1rem;"><strong>📞 Hotline:</strong> 030 123 45678 (täglich 9-20 Uhr)</p>
+            </div>
+
+            <div class="card-block" id="service">
+                <h2>🛠️ Lackierservice bestellen</h2>
+                <ul class="service-list">
+                    <li>✔️ Innenraummalerei & Tapezieren</li>
+                    <li>✔️ Autolackierung & Fahrzeugfolierung</li>
+                    <li>✔️ Möbellackierung, Holztüren, Treppen</li>
+                    <li>✔️ Fassadenbeschichtung & Wetterschutz</li>
+                    <li>✔️ Individuelle Farbberatung vor Ort</li>
+                </ul>
+                <button class="cta-button" style="background:#c9752e; margin-top:1rem;" onclick="document.getElementById('order-service').scrollIntoView({behavior:'smooth'});">Jetzt Auftrag anfragen →</button>
+            </div>
+        </div>
+
+        <div id="order-service" class="order-form">
+            <h2 style="color:#b45f2a; margin-bottom: 1rem;">📋 Angebot für Ihren Maler- & Lackierservice anfordern</h2>
+            <p>Sie erhalten innerhalb 2 Stunden eine Kostenschätzung inkl. 25% Rabatt auf den ersten Service!</p>
+            <form action="#" method="post" onsubmit="alert('Vielen Dank! Wir melden uns in Kürze mit Ihrem persönlichen Rabattangebot. +25% auf Erstauftrag'); return false;">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Vorname & Name *</label>
+                        <input type="text" required placeholder="Max Mustermann">
+                    </div>
+                    <div class="form-group">
+                        <label>Telefon *</label>
+                        <input type="tel" required placeholder="0151 12345678">
+                    </div>
+                    <div class="form-group">
+                        <label>E-Mail</label>
+                        <input type="email" placeholder="max@beispiel.de">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Service wählen *</label>
+                        <select required>
+                            <option>Wohnungsstreich (Wände/Decken)</option>
+                            <option>Möbellackierung</option>
+                            <option>Fassadenlackierung außen</option>
+                            <option>Autolackierung / Kratzerreparatur</option>
+                            <option>Individuelle Beratung + Angebot</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>ca. qm / Räume</label>
+                        <input type="text" placeholder="z.B. 75 qm / 3 Zimmer">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Ihre Nachricht / Wunschfarbe</label>
+                    <textarea rows="2" placeholder="z.B. RAL 9010, matte Lasur, schneller Termin..."></textarea>
+                </div>
+                <button type="submit">✉️ 25% Rabatt sichern & Angebot erhalten</button>
+                <p style="font-size:0.7rem; margin-top:0.8rem;">* Mit dem Absenden akzeptieren Sie unsere Datenschutzhinweise.</p>
+            </form>
+        </div>
+
+        <aside>
+            <div class="aside-promo">
+                🎁 AKTION: Gratis Farbmuster (3 Stück) bei jeder Bestellung über 150 € – plus 25% Neukundenrabatt! 
+                <strong>Rufen Sie uns an: 030 123 45678</strong>
+            </div>
+        </aside>
+    </main>
+
+    <footer id="kontakt">
+        <div class="footer-container">
+            <div class="footer-col">
+                <h4>Österreichischer Maler GmbH</h4>
+                <p>Hauptsitz Berlin-Friedrichshain<br>
+                Frankfurter Tor 1, 10243 Berlin<br>
+                E-Mail: service@oesterreichischer-maler.de</p>
+            </div>
+            <div class="footer-col">
+                <h4>Öffnungszeiten</h4>
+                <p>Mo–Fr: 9:00 – 19:00<br>
+                Sa: 10:00 – 15:00<br>
+                So & Feiertage: geschlossen</p>
+            </div>
+            <div class="footer-col">
+                <h4>Rechtliches</h4>
+                <p><a href="#">Impressum</a><br>
+                <a href="#">Datenschutz</a><br>
+                <a href="#">AGB & Widerruf</a></p>
+            </div>
+            <div class="footer-col">
+                <h4>Qualität & Handwerk</h4>
+                <p>✔️ Meisterbetrieb<br>
+                ✔️ Eco-zertifizierte Farben<br>
+                ✔️ 5 Jahre Garantie auf Lackierung</p>
+            </div>
+        </div>
+        <div class="copyright">
+            © 2026 Österreichischer Maler. Alle Rechte vorbehalten.
+        </div>
+    </footer>
+
+    <script>
+        document.querySelectorAll('a[href^="#"], button[onclick*="scrollIntoView"]').forEach(anchor => {
+            if(anchor.tagName === 'A' && anchor.getAttribute('href').startsWith('#')){
+                anchor.addEventListener('click', function(e) {
+                    const targetId = this.getAttribute('href').substring(1);
+                    const target = document.getElementById(targetId);
+                    if(target) {
+                        e.preventDefault();
+                        target.scrollIntoView({ behavior: 'smooth' });
+                    }
+                });
+            }
+        });
+        const scrollButtons = document.querySelectorAll('[onclick*="scrollIntoView"]');
+        scrollButtons.forEach(btn => {
+            const onclickAttr = btn.getAttribute('onclick');
+            if(onclickAttr && onclickAttr.includes('getElementById')) {
+            }
+        });
+    </script>
+</body>
+</html>
